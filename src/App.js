@@ -27,7 +27,7 @@ class App extends React.Component {
               <a href="#">Carolus Summarecon</a>
             </Navbar.Brand>
           </Navbar.Header>
-          <Nav bsStyle="tabs" activeKey={evKey} onSelect={(e) => this._handleSelect(e)} pullRight={true}>
+          <Nav bsStyle="pills" activeKey={evKey} onSelect={(e) => this._handleSelect(e)} pullRight={true}>
             <NavItem eventKey="1">Profile</NavItem>
             <NavItem eventKey="2">Visi & Misi</NavItem>
             <NavItem eventKey="3">Kontak</NavItem>
