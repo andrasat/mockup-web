@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -9,33 +8,31 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      evKey: 0
+
     };
   }
 
-  _handleSelect(evKey) {
-    this.setState({evKey});
-  };
-
   render() {
-    const { evKey } = this.state
+
     return (
-      <div className="App">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Carolus Summarecon</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav bsStyle="pills" activeKey={evKey} onSelect={(e) => this._handleSelect(e)} pullRight={true}>
-            <NavItem eventKey="1">Profile</NavItem>
-            <NavItem eventKey="2">Visi & Misi</NavItem>
-            <NavItem eventKey="3">Kontak</NavItem>
-            <NavItem eventKey="4">Guest Book</NavItem>
-          </Nav>
-        </Navbar>
-        <h1>Hello World</h1>
-      </div>
+      <Router>
+        <div className="App">
+          <nav className="nav hospital">
+            <div className="nav-left">
+              <p className="nav-item title is-3"><Link to="/">Carolus Summarecon</Link></p>
+            </div>
+            <div className="nav-right">
+              <p className="nav-item is-active"><Link to="/profile">Profile</Link></p>
+              <p className="nav-item"><Link to="/visi&misi">Visi & Misi</Link></p>
+              <p className="nav-item"><Link to="/kontak">Kontak</Link></p>
+            </div>
+          </nav>
+
+          <div classname="columns">
+
+          </div>
+        </div>
+      </Router>
     );
   }
 }

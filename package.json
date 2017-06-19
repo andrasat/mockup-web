@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "nuka-carousel": "^2.0.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -21,9 +22,12 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
+    "node-sass-chokidar": "^0.0.3",
     "react-scripts": "1.0.7"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar ./src/ -o ./src",
+    "watch-css": "npm run build-css && node-sass-chokidar ./src/ -o ./src --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build && echo mockupweb.surge.sh > ./build/CNAME && surge ./build",
     "test": "react-scripts test --env=jsdom",
