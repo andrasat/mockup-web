@@ -4,13 +4,13 @@
   height: 8em; }
   .carolus-header .carolus {
     position: absolute;
-    margin: 0.75em 1em 1em 1em;
+    margin: 0.5em 1em 1em 1.5em;
     font-weight: 500; }
   .carolus-header #mini-text {
     position: absolute;
     font-size: 13pt;
-    left: 5em;
-    top: 4em;
+    left: 6.5em;
+    top: 3em;
     margin: 1em; }
 
 .hospital {

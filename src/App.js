@@ -22,8 +22,12 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <div className="carolus-header">
-            <Link className="title is-1 carolus" to="/">St. Carolus</Link>
-            <p id="mini-text">Summarecon Serpong</p>
+            <div className="columns is-mobile">
+              <div className="column is-6">
+                <Link className="title is-1 carolus" to="/">St. Carolus</Link>
+                <p id="mini-text">Summarecon Serpong</p>
+              </div>
+            </div>
           </div>
           <nav className="nav hospital">
             <div className="nav-left">
