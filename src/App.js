@@ -21,14 +21,18 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+          <div className="carolus-header">
+            <Link className="title is-1 carolus" to="/">St. Carolus</Link>
+            <p id="mini-text">Summarecon Serpong</p>
+          </div>
           <nav className="nav hospital">
             <div className="nav-left">
-              <p className="nav-item title is-3"><Link to="/">Carolus Summarecon</Link></p>
+              <p className="nav-item"><Link className="left-items" to="/profile">Profile</Link></p>
+              <p className="nav-item"><Link className="left-items" to="/visi&misi">Visi & Misi</Link></p>
+              <p className="nav-item"><Link className="left-items" to="/kontak">Kontak</Link></p>
             </div>
             <div className="nav-right">
-              <p className="nav-item is-active"><Link to="/profile">Profile</Link></p>
-              <p className="nav-item"><Link to="/visi&misi">Visi & Misi</Link></p>
-              <p className="nav-item"><Link to="/kontak">Kontak</Link></p>
+
             </div>
           </nav>
 

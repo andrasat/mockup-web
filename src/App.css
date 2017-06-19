@@ -1,8 +1,31 @@
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
+.carolus-header {
+  height: 8em; }
+  .carolus-header .carolus {
+    position: absolute;
+    margin: 0.75em 1em 1em 1em;
+    font-weight: 500; }
+  .carolus-header #mini-text {
+    position: absolute;
+    font-size: 13pt;
+    left: 5em;
+    top: 4em;
+    margin: 1em; }
+
 .hospital {
-  margin: 4em 2em 1em 2em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  margin: auto;
+  height: 4em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #3aa6cc; }
+  .hospital .nav-left {
+    margin-left: 4em; }
+  .hospital .nav-right {
+    margin-right: 4em; }
+  .hospital .left-items {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    font-size: 14pt; }
 
 .megatron {
   margin-bottom: 2em;
