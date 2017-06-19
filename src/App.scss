@@ -1,4 +1,13 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 .hospital {
   margin: 4em 2em 1em 2em;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.megatron {
+  margin-bottom: 2em;
+  width: 100%;
+  max-height: 30%;
 }
