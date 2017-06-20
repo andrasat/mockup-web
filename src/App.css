@@ -4,26 +4,26 @@
   height: 8em; }
   .carolus-header .carolus {
     position: absolute;
-    margin: 0.5em 1em 1em 1.5em;
+    left: 5%;
+    top: 3%;
     font-weight: 500; }
-  .carolus-header #mini-text {
-    position: absolute;
+  .carolus-header .mini-text {
+    position: relative;
     font-size: 13pt;
-    left: 6.5em;
-    top: 3em;
-    margin: 1em; }
+    left: 20%;
+    top: 70px; }
 
 .hospital {
   margin: auto;
-  height: 4em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 10%;
   background-color: #3aa6cc; }
   .hospital .nav-left {
-    margin-left: 4em; }
-  .hospital .nav-right {
-    margin-right: 4em; }
+    margin-left: 5%; }
   .hospital .left-items {
     color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    font-size: 14pt; }
+  .hospital .right-items {
     font-weight: 400;
     font-size: 14pt; }
 

@@ -8,35 +8,36 @@ $white: rgba(255,255,255,0.95);
 
   .carolus {
     position: absolute;
-    margin: 0.5em 1em 1em 1.5em;
+    left: 5%;
+    top: 3%;
+    // margin: 0.5em 1em 1em 1.5em;
     font-weight: 500;
   }
 
-  #mini-text {
-    position: absolute;
+  .mini-text {
+    position: relative;
     font-size: 13pt;
-    left: 6.5em;
-    top: 3em;
-    margin: 1em;
+    left: 20%;
+    top: 70px;
   }
 }
 
 .hospital {
   margin: auto;
-  height: 4em;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  height: 10%;
   background-color: rgba(58,166,204,1);
 
   .nav-left {
-    margin-left: 4em;
-  }
-
-  .nav-right {
-    margin-right: 4em;
+    margin-left: 5%;
   }
 
   .left-items {
     color: $white;
+    font-weight: 400;
+    font-size: 14pt;
+  }
+
+  .right-items {
     font-weight: 400;
     font-size: 14pt;
   }
