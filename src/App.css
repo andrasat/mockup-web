@@ -9,6 +9,7 @@
     font-weight: 500; }
   .carolus-header .mini-text {
     position: relative;
+    white-space: nowrap;
     font-size: 13pt;
     left: 20%;
     top: 70px; }
@@ -28,6 +29,9 @@
     font-size: 14pt; }
 
 .megatron {
-  margin-bottom: 2em;
   width: 100%;
-  max-height: 30%; }
+  max-height: 20%;
+  margin: 0.5em auto; }
+
+.content {
+  margin-top: 1em; }

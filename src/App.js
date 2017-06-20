@@ -9,38 +9,29 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      height: 0,
-      width: 0
+      isHamburgerActive: false
     };
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', this._resizeWindow);
+  classHamburger = () => {
+    return 'nav-right nav-menu '+(this.state.isHamburgerActive ?'is-active':'')+' is-hidden-desktop';
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this._resizeWindow);
-  }
-
-  _resizeWindow = () => {
+  handleHamburgerClick = () => {
     this.setState({
-      width: window.innerWidth,
-      height: window.innerHeight
-    })
-  }
-
-  _isActive = () => {
-
+      isHamburgerActive: !this.state.isHamburgerActive
+    });
   }
 
   render() {
-    const { width, height } = this.state;
     const settings = {
       dots: true,
       infinite: true,
+      pauseOnHover: true,
+      adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 3500,
-      speed: 850,
+      speed: 900,
       slidesToShow: 1,
       slidesToScroll: 1
     };
@@ -55,9 +46,9 @@ export default class App extends React.Component {
               </div>
             </div>
           </div>
+
           <nav className="nav hospital">
             <div className="nav-left">
-            <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/news">News</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/profile">Profile</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/visi&misi">Visi & Misi</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/pelayanan">Pelayanan</Link></p>
@@ -65,8 +56,8 @@ export default class App extends React.Component {
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/karier">Karier</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/kontak">Kontak</Link></p>
             </div>
-            <div className="nav-right nav-menu is-active is-hidden-desktop">
-              <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/news">News</Link></p>
+
+            <div className={this.classHamburger()}>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/profile">Profile</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/visi&misi">Visi & Misi</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/pelayanan">Pelayanan</Link></p>
@@ -74,7 +65,8 @@ export default class App extends React.Component {
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/karier">Karier</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/kontak">Kontak</Link></p>
             </div>
-            <span className="nav-toggle">
+
+            <span className="nav-toggle" onClick={() => this.handleHamburgerClick()}>
               <span></span>
               <span></span>
               <span></span>
@@ -83,19 +75,18 @@ export default class App extends React.Component {
 
           <div className="megatron">
             <Slider {...settings}>
-              <img src="https://placeimg.com/1000/400/animals" alt="image1"/>
-              <img src="https://placeimg.com/1000/400/people" alt="image2"/>
-              <img src="https://placeimg.com/1000/400/arch" alt="image3"/>
-              <img src="https://placeimg.com/1000/400/nature" alt="image4"/>
-              <img src="https://placeimg.com/1000/400/animals" alt="image5"/>
-              <img src="https://placeimg.com/1000/400/people" alt="image6"/>
-              <img src="https://placeimg.com/1000/400/tech" alt="image7"/>
+              <img src="http://lorempixel.com/640/360/people" alt="image1"/>
+              <img src="http://lorempixel.com/640/360/people/2" alt="image2"/>
+              <img src="http://lorempixel.com/640/360/people/3" alt="image3"/>
+              <img src="http://lorempixel.com/640/360/people/4" alt="image4"/>
+              <img src="http://lorempixel.com/640/360/people/5" alt="image5"/>
+              <img src="http://lorempixel.com/640/360/people/6" alt="image6"/>
             </Slider>
           </div>
 
-          <div className="columns is-mobile">
+          <div className="columns is-mobile content">
             <div className="column">
-              <div><h1>Test</h1></div>
+              <div><h2>Test</h2></div>
               <div><h1>Test</h1></div>
               <div><h1>Test</h1></div>
             </div>
