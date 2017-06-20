@@ -49,20 +49,18 @@ export default class App extends React.Component {
 
           <nav className="nav hospital">
             <div className="nav-left">
-            <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/profile">Profile</Link></p>
-            <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/visi&misi">Visi & Misi</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/pelayanan">Pelayanan</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/penunjang">Penunjang Medis</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/karier">Karier</Link></p>
+            <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/profile">Profile</Link></p>
             <p className="nav-item is-hidden-mobile"><Link className="left-items" to="/kontak">Kontak</Link></p>
             </div>
 
             <div className={this.classHamburger()}>
-              <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/profile">Profile</Link></p>
-              <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/visi&misi">Visi & Misi</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/pelayanan">Pelayanan</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/penunjang">Penunjang Medis</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/karier">Karier</Link></p>
+              <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/profile">Profile</Link></p>
               <p className="nav-item is-hidden-tablet"><Link className="right-items" to="/kontak">Kontak</Link></p>
             </div>
 
