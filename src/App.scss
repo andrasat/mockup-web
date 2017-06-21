@@ -4,22 +4,28 @@
 $white: rgba(255,255,255,0.95);
 
 .carolus-header {
-  height: 8em;
+  height: 20%;
 
-  .carolus {
-    position: absolute;
-    left: 5%;
-    top: 3%;
-    // margin: 0.5em 1em 1em 1.5em;
-    font-weight: 500;
+  .carolus-title {
+    text-align: left;
+    padding: 1.5em;
+
+    .carolus {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .mini-text {
+      font-size: 11pt;
+      margin-left: 10%;
+      white-space: nowrap;
+    }
   }
 
-  .mini-text {
-    position: relative;
-    white-space: nowrap;
-    font-size: 13pt;
-    left: 20%;
-    top: 70px;
+  .emergency {
+    padding: 2em;
+    text-align: right;
+    font-size: 12pt;
   }
 }
 
@@ -46,12 +52,9 @@ $white: rgba(255,255,255,0.95);
 }
 
 .megatron {
-  width: 100%;
+  width: 90%;
   max-height: 20%;
-  margin: 0.5em auto;
+  margin: 1em auto;
 }
 
-.content {
-  margin-top: 1em;
-}
 

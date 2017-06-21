@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Slider from 'react-slick'
 import './App.css';
 
-
+import { Home } from './components'
 
 export default class App extends React.Component {
   constructor() {
@@ -24,25 +23,22 @@ export default class App extends React.Component {
   }
 
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      pauseOnHover: true,
-      adaptiveHeight: true,
-      autoplay: true,
-      autoplaySpeed: 3500,
-      speed: 900,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
     return (
       <Router>
         <div className="App">
           <div className="carolus-header">
-            <div className="columns is-mobile">
+            <div className="columns is-tablet">
               <div className="column is-6">
-                <Link className="title is-1 carolus" to="/">St. Carolus</Link>
-                <p className="mini-text">Summarecon Serpong</p>
+                <div className="carolus-title">
+                  <Link className="title is-2 carolus" to="/">St. Carolus</Link>
+                  <p className="mini-text">Summarecon Serpong</p>
+                </div>
+              </div>
+              <div className="column is-6">
+                <div className="emergency">
+                  <p>Telp: 021 - 5422 0811</p>
+                  <p>Gawat Darurat: 021 - 5422 0818 </p>
+                </div>
               </div>
             </div>
           </div>
@@ -71,29 +67,18 @@ export default class App extends React.Component {
             </span>
           </nav>
 
-          <div className="megatron">
-            <Slider {...settings}>
-              <img src="http://lorempixel.com/640/360/people" alt="image1"/>
-              <img src="http://lorempixel.com/640/360/people/2" alt="image2"/>
-              <img src="http://lorempixel.com/640/360/people/3" alt="image3"/>
-              <img src="http://lorempixel.com/640/360/people/4" alt="image4"/>
-              <img src="http://lorempixel.com/640/360/people/5" alt="image5"/>
-              <img src="http://lorempixel.com/640/360/people/6" alt="image6"/>
-            </Slider>
-          </div>
+          <Route exact path="/" component={Home} />
 
-          <div className="columns is-mobile content">
-            <div className="column">
-              <div><h2>Test</h2></div>
-              <div><h1>Test</h1></div>
-              <div><h1>Test</h1></div>
+          <footer className="footer">
+            <div className="container">
+              <div className="content has-text-centered">
+                <p>
+                  Created in 2017
+                </p>
+              </div>
             </div>
-            <div className="column">
-              <div><h1>Test</h1></div>
-              <div><h1>Test</h1></div>
-              <div><h1>Test</h1></div>
-            </div>
-          </div>
+          </footer>
+
         </div>
       </Router>
     );

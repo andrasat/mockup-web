@@ -1,18 +1,21 @@
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
 .carolus-header {
-  height: 8em; }
-  .carolus-header .carolus {
-    position: absolute;
-    left: 5%;
-    top: 3%;
-    font-weight: 500; }
-  .carolus-header .mini-text {
-    position: relative;
-    white-space: nowrap;
-    font-size: 13pt;
-    left: 20%;
-    top: 70px; }
+  height: 20%; }
+  .carolus-header .carolus-title {
+    text-align: left;
+    padding: 1.5em; }
+    .carolus-header .carolus-title .carolus {
+      font-weight: 500;
+      white-space: nowrap; }
+    .carolus-header .carolus-title .mini-text {
+      font-size: 11pt;
+      margin-left: 10%;
+      white-space: nowrap; }
+  .carolus-header .emergency {
+    padding: 2em;
+    text-align: right;
+    font-size: 12pt; }
 
 .hospital {
   margin: auto;
@@ -29,9 +32,6 @@
     font-size: 14pt; }
 
 .megatron {
-  width: 100%;
+  width: 90%;
   max-height: 20%;
-  margin: 0.5em auto; }
-
-.content {
-  margin-top: 1em; }
+  margin: 1em auto; }
